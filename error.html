@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30.RKS audio</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1c1d22, #0d0d0e);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 120px;
+            margin: 0;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            background: rgb(230 237 111);
+            color: #000000;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b9ac5a;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .emoji {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="emoji">😕</div>
+        <h1 id="errorCode">404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page you're looking for doesn't exist or has been moved.</p>
+        <button onclick="goHome()">Go Home</button>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+        // Random error code (optional fun feature)
+        const codes = ["404", "500", "403"];
+        document.getElementById("errorCode").innerText =
+            codes[Math.floor(Math.random() * codes.length)];
+
+//             setInterval(()=>{
+//    goPage();
+// },2000);
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
